@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics</title>
-</head>
-<body>
-    <h1>Analytics</h1>
-    <p>Total Likes: {{ total_likes }}</p>
-    <p>Total Shares: {{ total_shares }}</p>
-    <p>Total Comments: {{ total_comments }}</p>
+{% extends "base.html" %}
 
-    
-</body>
-</html>
+{% block title %}Analytics{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="card-title">Analytics</h1>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><span style="font-size: 20px; color: black;">Total Likes: {{ total_likes }}</span> </p>
+                    <p class="card-text"><span style="font-size: 20px; color: black;">Total Shares: {{ total_shares }}</span> </p>
+                    <p class="card-text"><span style="font-size: 20px; color: black;">Total Comments: {{ total_comments }}</span> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

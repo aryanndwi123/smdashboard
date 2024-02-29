@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'theme',
     "accounts",
     'compressor',
+    'bootstrap4',
 ]
 
 TAILWIND_APP_NAME = 'theme'
