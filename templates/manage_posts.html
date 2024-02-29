@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Posts</title>
+</head>
+<body>
+    <h1>Manage Posts</h1>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post.pk }} - {{ post.title }} - Likes: {{ post.likes }}, Shares: {{ post.shares }}, Comments: {{ post.comments }}</li>
+
+            <form action="{% url 'delete_post' pk=post.pk %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Delete Post</button>
+              </form>
+
+              <form action="{% url 'edit_post' pk=post.pk %}" method="get">
+                {% csrf_token %}
+                <button type="submit">Edit Post</button>
+              </form>
+
+              
+        {% endfor %}
+
+    </ul>
+</body>
+</html>
