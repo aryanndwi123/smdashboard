@@ -13,8 +13,8 @@ This guide provides step-by-step instructions to set up and run the project.
 1. Clone the repository:
 
     ```bash
-    git clone <repository_url>
-    cd <project_directory>
+    git clone https://github.com/aryanndwi123/smdashboard.git
+    cd smdashboard
     ```
 
 2. Create a virtual environment (optional but recommended):
